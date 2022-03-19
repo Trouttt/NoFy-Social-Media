@@ -5,6 +5,6 @@ import usersRouter from '../../../../modules/users/infra/http/routes/users.route
 createConnection();
 const routes = Router();
 
-routes.use('/vehicles', usersRouter);
+routes.use('/users', usersRouter);
 
 export default routes;
