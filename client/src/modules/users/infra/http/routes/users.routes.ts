@@ -9,9 +9,11 @@ usersRouter.post(
   '/',
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().required(),
-      age: Joi.string().required(),
       email: Joi.string().required(),
+      password: Joi.string().required(),
+      name: Joi.string().required(),
+      birthday: Joi.string().required(),
+      level: Joi.number().required(),
     },
   }),
   usersController.create,
