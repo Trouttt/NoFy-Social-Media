@@ -1,9 +1,9 @@
 {
   "type": "postgres",
-  "host": "localhost",
-  "port": 5432,
+  "host": "host.docker.internal",
+  "port": 49153,
   "username": "postgres",
-  "password": "postgres",
+  "password": "postgrespw",
   "database": "nofy",
   "entities": [ "./src/modules/**/infra/typeorm/entities/*.ts"
   ],

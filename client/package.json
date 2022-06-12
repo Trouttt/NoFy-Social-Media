@@ -10,10 +10,14 @@
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "celebrate": "^15.0.1",
     "cors": "^2.8.5",
+    "editorconfig": "^0.15.3",
     "express": "^4.17.1",
     "pg": "^8.7.3",
-    "typeorm": "^0.2.41"
+    "typeorm": "^0.2.41",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
