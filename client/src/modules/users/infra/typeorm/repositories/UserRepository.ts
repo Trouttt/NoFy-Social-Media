@@ -9,21 +9,13 @@ class UserRepository implements IUserRepository {
   constructor() {
     this.ormRepository = getRepository(User);
   }
-  save(data: User): Promise<User> {
-    throw new Error('Method not implemented.');
-  }
-  list(): Promise<IUser[] | undefined> {
-    throw new Error('Method not implemented.');
-  }
-  get(): Promise<IUser | undefined> {
-    throw new Error('Method not implemented.');
-  }
-  update(data: IUser): Promise<User> {
-    throw new Error('Method not implemented.');
-  }
   public async create(data: IUser): Promise<User> {
     const user = this.ormRepository.create(data);
     await this.ormRepository.save(user);
+    return user;
+  }
+  public async findOne(email: string): Promise<User | undefined> {
+    const user = this.ormRepository.findOne({ where: { email: email } });
     return user;
   }
 }
